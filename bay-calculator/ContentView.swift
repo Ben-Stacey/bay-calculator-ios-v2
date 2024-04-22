@@ -10,46 +10,39 @@ import SwiftData
 
 struct ContentView: View {
     @Environment(\.modelContext) private var modelContext
-    @Query private var items: [Item]
+    @Query private var users: [User]
 
     var body: some View {
         NavigationSplitView {
             List {
-                ForEach(items) { item in
+                ForEach(users) { user in
                     NavigationLink {
-                        Text("Item at \(item.timestamp, format: Date.FormatStyle(date: .numeric, time: .standard))")
+                        Text(user.firstName + " " + user.lastName )
                     } label: {
-                        Text(item.timestamp, format: Date.FormatStyle(date: .numeric, time: .standard))
+                        Text(user.firstName + " " + user.lastName )
                     }
                 }
-                .onDelete(perform: deleteItems)
+                .onDelete(perform: deleteUsers)
             }
-            .toolbar {
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    EditButton()
-                }
-                ToolbarItem {
-                    Button(action: addItem) {
-                        Label("Add Item", systemImage: "plus")
-                    }
-                }
-            }
+//            .toolbar {
+//                ToolbarItem(placement: .navigationBarTrailing) {
+//                    EditButton()
+//                }
+//                ToolbarItem {
+//                    Button(action: addUser) {
+//                        Label("Add User", systemImage: "plus")
+//                    }
+//                }
+//            }
         } detail: {
             Text("Select an item")
         }
     }
 
-    private func addItem() {
-        withAnimation {
-            let newItem = Item(timestamp: Date())
-            modelContext.insert(newItem)
-        }
-    }
-
-    private func deleteItems(offsets: IndexSet) {
+    private func deleteUsers(offsets: IndexSet) {
         withAnimation {
             for index in offsets {
-                modelContext.delete(items[index])
+                modelContext.delete(users[index])
             }
         }
     }
@@ -57,5 +50,5 @@ struct ContentView: View {
 
 #Preview {
     ContentView()
-        .modelContainer(for: Item.self, inMemory: true)
+        .modelContainer(for: User.self, inMemory: true)
 }

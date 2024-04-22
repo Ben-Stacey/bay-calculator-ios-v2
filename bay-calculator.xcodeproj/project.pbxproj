@@ -12,6 +12,11 @@
 		35ED07AA2BD641FC00CF5A60 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35ED07A92BD641FC00CF5A60 /* Item.swift */; };
 		35ED07AC2BD6420200CF5A60 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 35ED07AB2BD6420200CF5A60 /* Assets.xcassets */; };
 		35ED07AF2BD6420200CF5A60 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 35ED07AE2BD6420200CF5A60 /* Preview Assets.xcassets */; };
+		35ED07B72BD6454100CF5A60 /* Worker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35ED07B62BD6454100CF5A60 /* Worker.swift */; };
+		35ED07B92BD6454B00CF5A60 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35ED07B82BD6454B00CF5A60 /* User.swift */; };
+		35ED07BB2BD6455200CF5A60 /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35ED07BA2BD6455200CF5A60 /* Team.swift */; };
+		35ED07C32BD649B800CF5A60 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35ED07C22BD649B800CF5A60 /* LoginView.swift */; };
+		35ED07C52BD649D100CF5A60 /* CreateAccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35ED07C42BD649D100CF5A60 /* CreateAccountView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +26,11 @@
 		35ED07A92BD641FC00CF5A60 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		35ED07AB2BD6420200CF5A60 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		35ED07AE2BD6420200CF5A60 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		35ED07B62BD6454100CF5A60 /* Worker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Worker.swift; sourceTree = "<group>"; };
+		35ED07B82BD6454B00CF5A60 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		35ED07BA2BD6455200CF5A60 /* Team.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
+		35ED07C22BD649B800CF5A60 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		35ED07C42BD649D100CF5A60 /* CreateAccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +63,8 @@
 		35ED07A42BD641FC00CF5A60 /* bay-calculator */ = {
 			isa = PBXGroup;
 			children = (
+				35ED07BC2BD648D900CF5A60 /* pages */,
+				35ED07B52BD643A200CF5A60 /* models */,
 				35ED07A52BD641FC00CF5A60 /* bay_calculatorApp.swift */,
 				35ED07A72BD641FC00CF5A60 /* ContentView.swift */,
 				35ED07A92BD641FC00CF5A60 /* Item.swift */,
@@ -68,6 +80,33 @@
 				35ED07AE2BD6420200CF5A60 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		35ED07B52BD643A200CF5A60 /* models */ = {
+			isa = PBXGroup;
+			children = (
+				35ED07B62BD6454100CF5A60 /* Worker.swift */,
+				35ED07B82BD6454B00CF5A60 /* User.swift */,
+				35ED07BA2BD6455200CF5A60 /* Team.swift */,
+			);
+			path = models;
+			sourceTree = "<group>";
+		};
+		35ED07BC2BD648D900CF5A60 /* pages */ = {
+			isa = PBXGroup;
+			children = (
+				35ED07BD2BD648E100CF5A60 /* auth */,
+			);
+			path = pages;
+			sourceTree = "<group>";
+		};
+		35ED07BD2BD648E100CF5A60 /* auth */ = {
+			isa = PBXGroup;
+			children = (
+				35ED07C22BD649B800CF5A60 /* LoginView.swift */,
+				35ED07C42BD649D100CF5A60 /* CreateAccountView.swift */,
+			);
+			path = auth;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -140,9 +179,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				35ED07BB2BD6455200CF5A60 /* Team.swift in Sources */,
 				35ED07A82BD641FC00CF5A60 /* ContentView.swift in Sources */,
+				35ED07B72BD6454100CF5A60 /* Worker.swift in Sources */,
 				35ED07AA2BD641FC00CF5A60 /* Item.swift in Sources */,
+				35ED07B92BD6454B00CF5A60 /* User.swift in Sources */,
 				35ED07A62BD641FC00CF5A60 /* bay_calculatorApp.swift in Sources */,
+				35ED07C52BD649D100CF5A60 /* CreateAccountView.swift in Sources */,
+				35ED07C32BD649B800CF5A60 /* LoginView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
